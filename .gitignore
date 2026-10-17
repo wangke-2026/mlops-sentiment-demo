@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.py[cod]
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# IDE配置
+.vscode/
+.idea/
+
+# DVC
+.dvc/cache/
+dvc_remote/
+
+# 模型、数据集大文件，交给DVC管理，不要进Git
+ml/*.joblib
+ml/*.pkl
+data/*.csv
+
+# 系统垃圾文件
+.DS_Store
+Thumbs.db
+*.log

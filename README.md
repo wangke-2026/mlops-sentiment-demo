@@ -23,3 +23,4 @@ This is the coursework project for DevOps & MLOps, IMDB sentiment classification
 
 ## Notes
 Data is stored on Azure blob storage, managed by DVC for data versioning.
+Trigger CI pipeline test

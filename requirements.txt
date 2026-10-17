@@ -1,0 +1,16 @@
+# MLOps
+dvc
+mlflow
+dagshub
+# ML
+scikit-learn
+pandas
+# Web API
+fastapi
+uvicorn
+# Test
+pytest
+ruff
+black
+# model save
+joblib

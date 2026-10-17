@@ -1,10 +1,35 @@
-.venv/
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.py[cod]
 .pytest_cache/
+
+# 虚拟环境
+.venv/
+venv/
+env/
 .env
-mlruns/
-data/*.csv
+
+# IDE配置
+.vscode/
+.idea/
+
+# DVC
+.dvc/cache/
+dvc_remote/
+
+# 模型、数据集大文件，交给DVC管理，不要进Git
 ml/*.joblib
+ml/*.pkl
+data/*.csv
+
+# MLflow 本地运行记录
+mlruns/
 mlflow.db
 mlflow.db-*
+
+# 系统垃圾文件
+.DS_Store
+Thumbs.db
+*.log

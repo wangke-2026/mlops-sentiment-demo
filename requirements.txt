@@ -11,6 +11,7 @@ fastapi
 uvicorn
 # Test
 pytest
+httpx
 ruff
 black
 # model save

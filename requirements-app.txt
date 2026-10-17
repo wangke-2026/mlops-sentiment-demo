@@ -1,0 +1,7 @@
+# 运行时依赖 —— 只装推理服务需要的东西。
+# 训练/实验相关的依赖（dvc、mlflow、dagshub、pytest...）在 requirements.txt 里，
+# 不要装进运行镜像。
+fastapi
+uvicorn
+scikit-learn
+joblib

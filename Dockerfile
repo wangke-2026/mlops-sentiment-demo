@@ -1,10 +1,16 @@
-FROM python:3.10-slim
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# 只装运行时依赖，镜像保持精简
+COPY requirements-app.txt ./
+RUN pip install --no-cache-dir -r requirements-app.txt
 
 COPY . .
+
+EXPOSE 8000
 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

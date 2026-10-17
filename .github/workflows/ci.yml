@@ -2,12 +2,16 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ dev ]
+    branches: [dev, staging, main]
   pull_request:
-    branches: [ main ]
+    branches: [dev, staging, main]
+
+permissions:
+  contents: read
 
 jobs:
   test:
+    name: Lint, test and build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -16,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
@@ -28,3 +32,9 @@ jobs:
 
       - name: Format check with black
         run: black --check .
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Build Docker image
+        run: docker build -t mlops-sentiment-ci .

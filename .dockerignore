@@ -1,0 +1,41 @@
+# 版本控制与 IDE
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# 虚拟环境（876MB，绝对不能进构建上下文）
+.venv/
+venv/
+env/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# 测试代码（运行时不需要）
+tests/
+
+# 数据与 MLflow 运行记录（由 DVC 管理，不进镜像）
+data/
+mlruns/
+mlflow.db
+mlflow.db-*
+
+# DVC 元数据
+.dvc/
+
+# CI 与文档
+.github/
+*.md
+
+# Docker 自身
+Dockerfile
+.dockerignore
+
+# 环境变量
+.env

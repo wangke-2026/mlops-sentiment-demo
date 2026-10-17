@@ -1,0 +1,5 @@
+[core]
+    remote = azure
+['remote "azure"']
+    url = azure://dvc/mlops-sentiment-demo
+    account_name = wut2026

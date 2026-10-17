@@ -5,6 +5,7 @@ dagshub
 # ML
 scikit-learn
 pandas
+openpyxl
 # Web API
 fastapi
 uvicorn
